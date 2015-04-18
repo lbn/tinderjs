@@ -241,6 +241,16 @@ function TinderClient() {
       },
       makeTinderCallback(callback));
   };
+
+  /**
+   * Updates the profile for this user 
+   * @param {Object} options age_filter_min, age_filter_max, gender, gender_filter, distance_filter
+   * @param {Function} callback the callback to invoke when the request completes
+   */
+  this.updateProfile = function(options, callback) {
+    tinderPost('profile',options,
+      makeTinderCallback(callback));
+  };
   
   /**
    * Get user by id
